@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Test</title>
+        <script>
+            function sleep (time) 
+            {
+                return new Promise((resolve) => setTimeout(resolve, time));
+            }
+
+            // 5 sec timer
+            sleep(1000).then(() => {
+                location.reload()
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Hello</h1>
+        {% for i in res %}
+        <p>{{i}}</p>
+        {% endfor %}
+    </body>
+</html>
